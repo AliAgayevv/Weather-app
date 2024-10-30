@@ -1,4 +1,4 @@
-{
+
   /* <div class="card w-card-w h-80 bg-white rounded-2xl">
                     <h3 class="card-city-name p-8 text-2xl text-custom-dark relative
                     after:content-['AZ'] after:text-white after:text-xs after:font-bold after:rounded-full after:px-2 after:ml-1 after:bg-orange-500 after:absolute after:translate-y-1">
@@ -15,7 +15,7 @@
                     </div>
                 </div>
              */
-}
+
 
 const submitButton = document.getElementById("submit");
 const input = document.getElementById("input");
@@ -40,22 +40,15 @@ submitButton.addEventListener("click", (e) => {
     .then((data) => {
       const { main, name, sys, weather } = data;
 
-
-      
-      
-      
-
-      
-      
-      
       // set variable from api data
       const temperature = Math.round(main.temp);
       const city = name;
-      const countyName = sys.country;
+      const countryName = sys.country;
       const desc = weather[0].description;
       const icon = weather[0].icon;
       
       
+
 
 
       if(listOfAllCities.indexOf(city) === -1)
@@ -88,8 +81,8 @@ submitButton.addEventListener("click", (e) => {
         document.getElementById('api-section').appendChild(div);
   
   
-        const classesForDiv = "card w-card-w h-80 bg-white rounded-2xl";
-        const classesForH3 = `card-city-name p-8 text-2xl text-custom-dark relative after:content-['${countyName}'] after:text-white after:text-xs after:font-bold after:rounded-full after:px-2 after:ml-1 after:bg-orange-500 after:absolute after:translate-y-1`;
+        const classesForDiv = "card w-11/12 max-sm:ml-5 xl:w-card-w h-80 bg-white rounded-2xl";
+        const classesForH3 = `card-city-name p-8 text-2xl text-custom-dark relative after:text-white after:text-xs after:font-bold after:rounded-full after:px-3 after:ml-1 after:bg-orange-500 after:absolute after:translate-y-1 after:content-['${countryName}']`;
         const classesForH2 =
           "card-temperature text-7xl font-bold ml-7 realtive after:content-['°C'] after:text-inherit after:text-4xl after:font-light after:absolute";
         const classesForHelperDiv = "city-status ml-7";
@@ -107,6 +100,8 @@ submitButton.addEventListener("click", (e) => {
   
         tempArr = classesForHelperDiv.split(" ");
         classAdd(tempArr, helperDiv);
+
+        
   
 
         
@@ -119,11 +114,6 @@ submitButton.addEventListener("click", (e) => {
       
       input.value = "";
 
-
-
-
-
-     
 
     })
     .catch(() => {
