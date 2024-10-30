@@ -13,141 +13,20 @@
 
 </head>
 <body class="font-roboto w-full h-full bg-custom-primary">
-    <div class="flex justify-center items-center w-screen h-screen">
+    <div class="flex justify-center w-screen h-screen">
         <div class="container max-w-6xl mt-14" >
             <h2 class="text-white text-4xl font-bold">Weather App</h2>
-            <form class="flex mt-10 ml-2 gap-2">
-                <input type="text" class="border-b-2 border-white text-white text-2xl bg-transparent outline-none placeholder:text-white w-96" autofocus placeholder="Search for a city">
-                <button type="submit" class="bg-custom-red text-white p-4 w-28 rounded-lg hover:bg-custom-darkRed transition-all">SUBMIT</button>
-                <span id="msg"></span>
+            <form id="form" class="flex mt-10 ml-2 gap-2">
+                <input id="input" type="text" class="border-b-2 border-white text-white text-2xl bg-transparent outline-none placeholder:text-white w-96" autofocus placeholder="Search for a city">
+                <button id="submit" type="submit" class="bg-custom-red text-white p-4 w-28 rounded-lg hover:bg-custom-darkRed transition-all">SUBMIT</button>
+                <span id="msg" class="text-white absolute left-40 top-52"></span>
             </form>
 
             <div id="api-section" class=" h-full mt-20
-            grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-4 gap-y-5">
-                <div class="card w-card-w h-80 bg-white rounded-2xl">
-                    <h3 class="card-city-name p-8 text-2xl text-custom-dark relative
-                    after:content-['AZ'] after:text-white after:text-xs after:font-bold after:rounded-full after:px-2 after:ml-1 after:bg-orange-500 after:absolute after:translate-y-1">
-                        Baku
-                    </h3>
-                    <h2 class="card-temperature
-                    text-7xl font-bold ml-7 realtive
-                    after:content-['°C'] after:text-inherit after:text-4xl after:font-light after:absolute
-                    ">18</h2>
-                    
-                    <div class="city-status ml-7">
-                        <i class="fa-solid fa-cloud text-6xl mb-6 mt-5"></i>
-                        <p class="text-custom-dark">SCATTERED CLOUDS</p>
-                    </div>
-                </div>
-                <div class="card w-card-w h-80 bg-white rounded-2xl">
-                    <h3 class="card-city-name p-8 text-2xl text-custom-dark relative
-                    after:content-['AZ'] after:text-white after:text-xs after:font-bold after:rounded-full after:px-2 after:ml-1 after:bg-orange-500 after:absolute after:translate-y-1">
-                        Baku
-                    </h3>
-                    <h2 class="card-temperature
-                    text-7xl font-bold ml-7 realtive
-                    after:content-['°C'] after:text-inherit after:text-4xl after:font-light after:absolute
-                    ">18</h2>
-                    
-                    <div class="city-status ml-7">
-                        <i class="fa-solid fa-cloud text-6xl mb-6 mt-5"></i>
-                        <p class="text-custom-dark">SCATTERED CLOUDS</p>
-                    </div>
-                </div>
-                <div class="card w-card-w h-80 bg-white rounded-2xl">
-                    <h3 class="card-city-name p-8 text-2xl text-custom-dark relative
-                    after:content-['AZ'] after:text-white after:text-xs after:font-bold after:rounded-full after:px-2 after:ml-1 after:bg-orange-500 after:absolute after:translate-y-1">
-                        Baku
-                    </h3>
-                    <h2 class="card-temperature
-                    text-7xl font-bold ml-7 realtive
-                    after:content-['°C'] after:text-inherit after:text-4xl after:font-light after:absolute
-                    ">18</h2>
-                    
-                    <div class="city-status ml-7">
-                        <i class="fa-solid fa-cloud text-6xl mb-6 mt-5"></i>
-                        <p class="text-custom-dark">SCATTERED CLOUDS</p>
-                    </div>
-                </div>
-                <div class="card w-card-w h-80 bg-white rounded-2xl">
-                    <h3 class="card-city-name p-8 text-2xl text-custom-dark relative
-                    after:content-['AZ'] after:text-white after:text-xs after:font-bold after:rounded-full after:px-2 after:ml-1 after:bg-orange-500 after:absolute after:translate-y-1">
-                        Baku
-                    </h3>
-                    <h2 class="card-temperature
-                    text-7xl font-bold ml-7 realtive
-                    after:content-['°C'] after:text-inherit after:text-4xl after:font-light after:absolute
-                    ">18</h2>
-                    
-                    <div class="city-status ml-7">
-                        <i class="fa-solid fa-cloud text-6xl mb-6 mt-5"></i>
-                        <p class="text-custom-dark">SCATTERED CLOUDS</p>
-                    </div>
-                </div>
+            grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-4 gap-y-5"> 
                 
-                <div class="card w-card-w h-80 bg-white rounded-2xl">
-                    <h3 class="card-city-name p-8 text-2xl text-custom-dark relative
-                    after:content-['AZ'] after:text-white after:text-xs after:font-bold after:rounded-full after:px-2 after:ml-1 after:bg-orange-500 after:absolute after:translate-y-1">
-                        Baku
-                    </h3>
-                    <h2 class="card-temperature
-                    text-7xl font-bold ml-7 realtive
-                    after:content-['°C'] after:text-inherit after:text-4xl after:font-light after:absolute
-                    ">18</h2>
-                    
-                    <div class="city-status ml-7">
-                        <i class="fa-solid fa-cloud text-6xl mb-6 mt-5"></i>
-                        <p class="text-custom-dark">SCATTERED CLOUDS</p>
-                    </div>
                 </div>
-                
-                <div class="card w-card-w h-80 bg-white rounded-2xl">
-                    <h3 class="card-city-name p-8 text-2xl text-custom-dark relative
-                    after:content-['AZ'] after:text-white after:text-xs after:font-bold after:rounded-full after:px-2 after:ml-1 after:bg-orange-500 after:absolute after:translate-y-1">
-                        Baku
-                    </h3>
-                    <h2 class="card-temperature
-                    text-7xl font-bold ml-7 realtive
-                    after:content-['°C'] after:text-inherit after:text-4xl after:font-light after:absolute
-                    ">18</h2>
-                    
-                    <div class="city-status ml-7">
-                        <i class="fa-solid fa-cloud text-6xl mb-6 mt-5"></i>
-                        <p class="text-custom-dark">SCATTERED CLOUDS</p>
-                    </div>
-                </div>
-                
-                <div class="card w-card-w h-80 bg-white rounded-2xl">
-                    <h3 class="card-city-name p-8 text-2xl text-custom-dark relative
-                    after:content-['AZ'] after:text-white after:text-xs after:font-bold after:rounded-full after:px-2 after:ml-1 after:bg-orange-500 after:absolute after:translate-y-1">
-                        Baku
-                    </h3>
-                    <h2 class="card-temperature
-                    text-7xl font-bold ml-7 realtive
-                    after:content-['°C'] after:text-inherit after:text-4xl after:font-light after:absolute
-                    ">18</h2>
-                    
-                    <div class="city-status ml-7">
-                        <i class="fa-solid fa-cloud text-6xl mb-6 mt-5"></i>
-                        <p class="text-custom-dark">SCATTERED CLOUDS</p>
-                    </div>
-                </div>
-                
-                <div class="card w-card-w h-80 bg-white rounded-2xl">
-                    <h3 class="card-city-name p-8 text-2xl text-custom-dark relative
-                    after:content-['AZ'] after:text-white after:text-xs after:font-bold after:rounded-full after:px-2 after:ml-1 after:bg-orange-500 after:absolute after:translate-y-1">
-                        Baku
-                    </h3>
-                    <h2 class="card-temperature
-                    text-7xl font-bold ml-7 realtive
-                    after:content-['°C'] after:text-inherit after:text-4xl after:font-light after:absolute
-                    ">18</h2>
-                    
-                    <div class="city-status ml-7">
-                        <i class="fa-solid fa-cloud text-6xl mb-6 mt-5"></i>
-                        <p class="text-custom-dark">SCATTERED CLOUDS</p>
-                    </div>
-                </div>
+            
                 
             </div>
         </div>
