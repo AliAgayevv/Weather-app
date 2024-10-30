@@ -12,6 +12,9 @@ module.exports = {
           orange: "#ff8c00"
         }
       },
+      width: {
+        'card-w' : '17.5rem',
+      },
       fontFamily: {
         roboto: ['Roboto', 'sans-serif'], 
       },
@@ -19,3 +22,5 @@ module.exports = {
     },
     plugins: [],
   }
+
+  // 280
