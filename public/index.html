@@ -14,12 +14,12 @@
 </head>
 <body class="font-roboto w-full h-full bg-custom-primary">
     <div class="flex justify-center w-screen h-screen">
-        <dixv class="container max-w-6xl mt-14">
-            <h2 class="text-white text-4xl font-bold">Weather App</h2>
-            <form id="form" class="flex mt-10 ml-2 gap-2 ">
-                <input id="input" type="text" class="border-b-2 border-white text-white text-2xl bg-transparent outline-none placeholder:text-white w-96" autofocus placeholder="Search for a city">
-                <button id="submit" type="submit" class=" bg-custom-red text-white p-4 w-28 rounded-lg hover:bg-custom-darkRed transition-all">SUBMIT</button>
-                <span id="msg" class="text-white absolute left-40 top-52"></span>
+        <div class="container max-w-6xl mt-14">
+            <h2 class="text-white text-4xl font-bold max-sm:ml-36 max-sm:underline">Weather App</h2>
+            <form id="form" class="flex max-sm:flex-col  mt-10 ml-2 gap-2">
+                <input id="input" type="text" class="border-b-2 max-sm:w-11/12 max-sm:m-auto border-white text-white text-2xl bg-transparent outline-none placeholder:text-white w-96" autofocus placeholder="Search for a city">
+                <button id="submit" type="submit" class=" max-sm:w-11/12 max-sm:m-auto max-sm:rounded-2xl max-sm:mt-3 bg-custom-red text-white p-4 w-28 rounded-lg hover:bg-custom-darkRed transition-all">SUBMIT</button>
+                <span id="msg" class="text-white absolute left-40 top-52 max-sm:absolute max-sm:top-64 max-sm:text-4xl max-sm:left-32"></span>
             </form>
 
             <div id="api-section" class=" h-full mt-20
@@ -28,7 +28,7 @@
                 </div>
             
                 
-            </dixv>
+            </div>
         </div>
 
         

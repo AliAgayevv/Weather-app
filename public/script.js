@@ -120,6 +120,7 @@ submitButton.addEventListener("click", (e) => {
       errorMessage.innerText = `Wrong city name`
       input.value = "";
     });
+
 });
 
 
